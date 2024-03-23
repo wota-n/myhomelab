@@ -5,4 +5,3 @@ qm set 5000 --scsihw virtio-scsi-pci --scsi0 nvme:vm-5000-disk-0
 qm set 5000 --ide2 nvme:cloudinit
 qm set 5000 --boot c --bootdisk scsi0
 qm set 5000 --serial0 socket --vga serial0
-qm create 150 --memory 2048 --name debian-cloud --net0 virtio,bridge=vmbr0
