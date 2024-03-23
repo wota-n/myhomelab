@@ -1,6 +1,6 @@
 qm create 5000 --memory 8192 --core 2 --name debian-vm --net0 virtio,bridge=vmbr0
 # cd /var/lib/vz/template/iso/
-qm importdisk 5000 debian-12.5.0-amd64-netinst.iso nvme
+qm importdisk 5000 <cloud-image.img here> nvme
 qm set 5000 --scsihw virtio-scsi-pci --scsi0 nvme:vm-5000-disk-0
 qm set 5000 --ide2 nvme:cloudinit
 qm set 5000 --boot c --bootdisk scsi0
