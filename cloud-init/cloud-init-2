@@ -1,5 +1,5 @@
 qm create 5000 --memory 8192 --core 2 --name debian-vm --net0 virtio,bridge=vmbr0
-# cd /var/lib/vz/template/iso/
+# cd /var/lib/vz/template/iso/ this iis where iso images are stored by default
 qm importdisk 5000 <cloud-image.img here> nvme
 qm set 5000 --scsihw virtio-scsi-pci --scsi0 nvme:vm-5000-disk-0
 qm set 5000 --ide2 nvme:cloudinit
